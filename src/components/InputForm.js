@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import './InputForm.css'
+
+const STYLES = ['btn--primary', 'btn--outline']
+
+const SIZES = ['btn--medium', 'btn--large']
 
 const InputForm = ({onInsert, onDelete, onUpdate}) => {
     const [input, setInput] = useState('');
@@ -16,6 +21,7 @@ const InputForm = ({onInsert, onDelete, onUpdate}) => {
     };
     return (
         <form>
+
             <input type="text" value={input} onChange={e => setInput(e.target.value)} 
             Placeholder="Enter Data"
             />

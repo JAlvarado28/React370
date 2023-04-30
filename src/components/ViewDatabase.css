@@ -13,6 +13,37 @@
     background-size : cover;
 }
 
+.modifyDatabase-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.modifyDatabase-header > h1 {
+    color : #fff;
+    font-size: 100px;
+    margin-top: -100px;
+}
+
+.modifyDatabase-header > p {
+    margin-top: 8px;
+    color: #fff;
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.modifyDatabase-btns {
+    margin-top: -32px;
+}
+
+.table-title {
+    margin-top: 32px;
+    color: #fff;
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .viewDatabase-container > h1 {
     color : #fff;
     font-size: 100px;
@@ -25,3 +56,73 @@
     font-size: 32px;
     font-family: 'Times New Roman', Times, serif;
 }
+
+.viewDatabase-container > form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.viewDatabase-container > form > input{
+    margin: 6px;
+    padding: 10px;
+    font-size: 18px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.viewDatabase-container > form > button {
+    margin : 6px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #1c2237;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.viewDatabase-container > form > button:hover {
+    background-color: #4b4c4d;
+}
+
+.viewDatabase-container table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 32px;
+  }
+  
+  .viewDatabase-container th,
+  .viewDatabase-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .viewDatabase-container th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+
+  @media screen and (max-width:960x){
+    .viewDatabase-container > h1 {
+        font-size: 70px;
+        margin-top : -150px;
+    }
+  }
+
+  @media screen and (max-width: 760px){
+    .viewDatabase-container > h1 {
+        font-size: 50px;
+        margin-top : -100px;
+    }
+    .viewDatabase-container > form > input {
+        font-size: 14px;
+    }
+    .viewDatabase-container > form > button {
+        font-size: 14px;
+    }
+  }

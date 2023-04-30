@@ -3,6 +3,8 @@ import {Button} from "./Button";
 import "./ModifyDatabase.css";
 import React, { useState } from 'react';
 import SQLmod from "./SQLmod";
+import backgroundImage from "../imagesSRC/cs.jpeg";
+
 
 
 function ModifyDatabase() {
@@ -34,9 +36,14 @@ function ModifyDatabase() {
         setShowDelete(false);
     };
 
+      // allows the image to be displayed
+  const backgroundImageStyle = {
+    backgroundImage: `url(${backgroundImage})`,
+  };
+
     return (
-        <div className="modifyDatabase">
-            <video src='/videos/video-1.mp4' autoPlay loop muted />
+        <div className="modifyDatabase" style={backgroundImageStyle}>
+            {/* <video src='/videos/video-1.mp4' autoPlay loop muted /> */}
             <h1>Modify Database</h1>
             <div className='modifyDatabase-btns'>
                 <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' onClick={showInsertComponent}>
@@ -49,9 +56,9 @@ function ModifyDatabase() {
                     DELETE
                 </Button>
 
-                <SQLmod show={showInsert} handleClose={closeInsertComponent} title="Insert SQL Command" />
-                <SQLmod show={showUpdate} handleClose={closeUpdateComponent} title="Update SQL Command" />
-                <SQLmod show={showDelete} handleClose={closeDeleteComponent} title="Delete SQL Command" />
+                <SQLmod show={showInsert} handleClose={closeInsertComponent} title="Insert SQL Command" route="/insert"/>
+                <SQLmod show={showUpdate} handleClose={closeUpdateComponent} title="Update SQL Command" route="/update"/>
+                <SQLmod show={showDelete} handleClose={closeDeleteComponent} title="Delete SQL Command" route="/delete"/>
 
                 </div>
         </div>

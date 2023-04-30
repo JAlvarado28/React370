@@ -1,7 +1,7 @@
 import React, {useState } from "react";
-import "./SQLmod.css"
+import "./ViewSQLmod.css"
 
-const SQLmod = ({show, handleClose, title, route}) => {
+const SQLmod = ({show, handleClose, title, route, setData, setTableName}) => {
     const [sqlQuery, setSqlQuery] = useState("");
 
     const handleInputChange = (e) => {
@@ -20,6 +20,12 @@ const SQLmod = ({show, handleClose, title, route}) => {
             }
             const result = await response.text();
             console.log("Result: ", result);
+            const parsedResult = JSON.parse(result);
+            const data = parsedResult.data;
+            const tableName = parsedResult.tableName;
+            setData(data, tableName);
+            // setData(parsedResult);
+            // setTableName(parsedResult[0].tableName);
         } catch(error){
             console.log("Error: ",error);
         }

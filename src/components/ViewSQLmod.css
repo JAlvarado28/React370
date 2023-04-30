@@ -49,6 +49,8 @@
     background-color: #ccc;
   }
   
+
+  
   @media screen and (max-width: 760px) {
     .mod-content h2 {
       font-size: 24px;

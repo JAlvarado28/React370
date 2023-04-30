@@ -1,10 +1,10 @@
-video {
+/* video {
     object-fit: cover;
     width: 100%;
     height: 100%;
     position: fixed;
     z-index: -1;
-}
+} */
 
 .nav-link {
     color: inherit;
@@ -25,6 +25,10 @@ video {
     align-items: center;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
     object-fit: contain;
+    background-position : center center;
+    background-repeat : no-repeat;
+    background-attachment : fixed;
+    background-size : cover;
 }
 
 .modifyDatabase > h1 {

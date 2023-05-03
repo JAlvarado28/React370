@@ -94,17 +94,53 @@
     margin-top: 32px;
   }
   
-  .viewDatabase-container th,
-  .viewDatabase-container td {
+.viewDatabase-container th,
+.viewDatabase-container td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
   }
   
-  .viewDatabase-container th {
+.viewDatabase-container th {
     background-color: #f2f2f2;
     font-weight: bold;
   }
+  
+
+table-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+  
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+  
+th,td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+  
+th {
+    /* background-color: #f2f2f2; */
+    font-weight: bold;
+}
+
+tr{
+    background-color: #f0f0f0
+}
+th{
+    background-color: #ffffff;
+}
+/* Change the background color for even rows */
+  
+  /* Change the font color to a darker one for better readability */
+table, th, td {
+    color: #000000;
+}
   
 
   @media screen and (max-width:960x){

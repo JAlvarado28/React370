@@ -58,6 +58,7 @@ function ViewDatabase() {
       </div>
       <div className="table-title"> Table: {tableName}  </div>
       {data.length > 0 && (
+        <div className="table-countainter">
         <table>
           <thead>
             <tr>
@@ -68,6 +69,7 @@ function ViewDatabase() {
           </thead>
           <tbody>{renderData()}</tbody>
         </table>
+        </div>
       )}
     </div>
   );
